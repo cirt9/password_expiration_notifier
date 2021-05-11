@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <notification_group_name>GROUP_NAME</notification_group_name>
+    <days_to_notify_in_advance>7</days_to_notify_in_advance>
+    <smtp_port>465</smtp_port>
+    <smtp_server>smtp.com</smtp_server>
+    <sender_email>email@domain.com</sender_email>
+    <sender_password>password</sender_password>
+    <service_notification_email>service@domain.com</service_notification_email>
+    <password_will_expire_notification_subject>
+        Twoje hasło wygaśnie {{ date }} o godzinie {{ time }}
+    </password_will_expire_notification_subject>
+    <password_will_expire_notification_message>
+        Twoje hasło do konta {{ username }} wygaśnie {{ date }} o godzinie {{ time }}.
+    
+    Ta wiadomość została wysłana automatycznie. Prosimy na nią nie odpowiadać.
+    </password_will_expire_notification_message>
+    <password_expired_notification_subject>
+        Twoje hasło wygasło
+    </password_expired_notification_subject>
+    <password_expired_notification_message>
+        Twoje hasło do konta {{ username }} wygasło.
+
+    Ta wiadomość została wysłana automatycznie. Prosimy na nią nie odpowiadać.
+    </password_expired_notification_message>
+    <service_notification_email_subject>Program powiadamiający o wygasaniu haseł wykrył nieprawidłowości w konfiguracji</service_notification_email_subject>
+    <service_notification_email_message>
+        {{ errors_list }}
+    
+    Ta wiadomość została wysłana automatycznie. Prosimy na nią nie odpowiadać.
+    </service_notification_email_message>
+    <user_email_not_found_message>Dla użytkownika {{ username }} brakuje adresu email w konfiguracji programu powiadamiającego o wygasaniu hasła.</user_email_not_found_message>
+    <user_password_never_expires_message>Hasło użytkownika {{ username }} nigdy nie wygasa.</user_password_never_expires_message>
+    <users>
+        <user>
+            <username>username</username>
+            <email>useremail@domain.com</email>
+        </user>
+    </users>
+</config>
